@@ -1,5 +1,6 @@
 # Object file
 *.o
+sftp-config.json
 
 # Ada Library Information
 *.ali
