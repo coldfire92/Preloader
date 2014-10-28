@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+       <style>
+
+            body{
+                margin: 0px;
+            }
+             ul#debbuger {
+                padding: 0;
+             }
+
+            ul#debbuger li{
+                list-style-type: none;
+                width: 100%;
+                padding: 5px;
+            }
+
+            ul#debbuger li.error {
+                background: red;
+                color: #fff;
+            }
+
+            ul#debbuger li.warn {
+                background: orange;
+                color: #fff;
+            }
+
+             ul#debbuger li.log {
+                background: #3399FF;
+                color: #fff;
+            }
+
+
+       </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+     <ul id="debbuger">
+
+     </ul>   
+        
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
+   
+
+    <!-- 
+    <script src="modules/css/lib/basketJS.js"></script>
+    <script src="modules/css/preloaderMP_CSS.js"></script>
+    <script src="modules/css/preloaderMP_CSS_DEB.js"></script>
+    
+    <script src="modules/js/preloaderMP_JS.js"></script>
+    <script src="modules/js/preloaderMP_JS_DEB.js"></script>
+
+    <script src="modules/img/preloaderMP_IMG.js"></script>
+    <script src="modules/img/preloaderMP_IMG_DEB.js"></script>
+
+    <script src="main/preloaderMP_DEB.js"></script> 
+    <script src="main/preloaderMP.js"></script>
+    
+    -->
+
+    <script src="output/preloaderMP.min.js"></script>
+
+    <script>
+
+
+    window.onload = function(){
+
+
+        var preloader = new preloaderMP({
+            CSS: {
+                mobile: ["files/css/mobile/file1.css", "files/css/mobile/file2.css", "files/css/mobile/file3.css"],
+                screen: ["files/css/screen/file1.css", "files/css/screen/file2.css", "files/css/screen/file3.css"]
+            },
+            JS: {
+                screen: {
+                    'files/js/screen/jquery.js' : ['files/js/screen/jqueryUI.js']
+                    },
+                mobile: {
+                    'files/js/screen/jquery.js' : ['files/js/screen/jqueryUI.js']
+                }    
+            },
+            IMG: [
+                {
+                  min: 1000, // load when width (1000, 1200)
+                  max: 1200,
+                  images: ['files/img/1000_1200.jpg']
+                },
+
+                {
+                  min: 800, // load when min 800
+                  images: ['files/img/min_800.jpg']
+                },
+
+                {
+                  max: 900,
+                  images: ['files/img/max_900.jpg']
+                },
+                {
+                  type: 'screen', // screen|mobile
+                  images: ['files/img/screen.jpg']
+                },
+                {
+                  type: 'mobile', // screen|mobile
+                  images: ['files/img/mobile.jpg']
+                },
+                {
+                  images: ['files/img/always.jpg']
+                }
+
+            ],
+            MAIN: {
+                 // isMobile: false,
+                 // screenWidth: '1344', // bez px
+             },
+            UI: {
+                onLoadFile: function(loaded, all, percange) {
+
+                    // console.log(loaded + '/' + all + ' | ' + percange);
+                    
+                },
+                init: function() {},
+                complete: function(){}
+            }
+        });
+
+
+    };
+
+    </script>
+</body>
+</html>

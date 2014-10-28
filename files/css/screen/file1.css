@@ -1,0 +1,1265 @@
+/*=========================
+Common Modals Styles
+===========================*/
+
+.modal-open{
+    overflow: visible;
+}
+
+.modal-scrollable{
+    overflow: hidden!important;
+}
+
+.modal-content{
+    background-color: #fff;
+    color: #7c7c7c;
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+}
+
+.modal-content h1{
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #202020;
+    margin-bottom: 5px;
+}
+
+.modal-content h2{
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+.modal-content p.smaller{
+    font-size: 1.4rem;
+	margin-top: -8px;
+}
+
+/* patterns */
+.modal-content .tiles-pattern{
+    background-image: url('../img/tiles-pattern.svg');
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+/* forms inputs common styles */
+.modal-content .input-row{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 18px;
+    padding: 0 55px;
+    padding-left: 115px;
+}
+
+.modal-content .input-row:after{
+    content: '';
+    display: block;
+    width: 55px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: 24px auto;
+    background-size: 24px auto;
+}
+
+.modal-content .input-row.success:after{
+    background-image: url('../img/icon-tick.svg');
+}
+
+.modal-content .input-row.error:after{
+    background-image: url('../img/icon-error.svg');
+}
+
+.modal-content .input-row label{
+    width: 105px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+    color: #202020;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.modal-content .input-row input,
+input.input-style{
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 5px;
+    font-size: 1.5rem;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.modal-content .input-row.success input{
+    border: 1px solid #25B34B;
+}
+
+.modal-content .input-row.error input{
+    border: 1px solid #EE2725;
+}
+
+.modal-content .checkbox-row{
+    margin-bottom: 16px;
+    margin-left: 115px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.modal-content button.submit{
+    text-transform: none;
+    margin-left: 120px;
+    min-width: 110px;
+}
+
+.modal-content .input-row .info,
+.modal-content .checkbox-row .info{
+    display: block;
+    margin-top: 2px;
+    font-size: 1.3rem;
+}
+
+.modal-content .input-row .info{
+    margin-left: 6px;
+}
+
+.modal-content .checkbox-row .info{
+    margin-left: 29px;
+}
+
+.modal-content .input-row.error .info,
+.modal-content .checkbox-row.error .info{
+    color: #EE2725;
+}
+
+
+
+/*=========================
+Access Denied Modals Styles
+===========================*/
+.download-denied.modal-content{
+    max-width: 550px;
+    padding: 150px 15px 50px;
+    background-image: url(../img/download.png);
+    -webkit-background-size: 73px auto;
+    background-size: 73px auto;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    text-align: center;
+}
+
+.download-denied.modal-content .btn-style {
+    color: #fff;
+}
+
+.download-denied.modal-content h2{
+    color: #484848;
+}
+
+.download-denied.modal-content hr{
+    border-top: 1px solid #ebebeb;
+}
+
+.download-denied.modal-content .title{
+    margin: 0 0 18px;
+}
+
+.download-denied.modal-content .info{
+    margin: 0 0 35px;
+}
+
+.download-denied.modal-content .middle-title{
+    margin: 0 0 28px;
+}
+
+.download-denied.modal-content .bordered{
+    margin: 32px 0;
+    padding: 35px 0px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.download-denied.modal-content.download{
+    min-width: 450px;
+}
+
+.download-denied.modal-content.download .info{
+    margin: 0 0 35px;
+}
+
+.download-denied.modal-content.download .info2{
+    margin: 0 0 23px;
+}
+
+.download-denied.modal-content.download hr{
+    margin: 30px 0 20px;
+}
+
+
+
+
+/*=========================
+Access Denied Modals Styles
+===========================*/
+.access-denied.modal-content{
+    max-width: 550px;
+    padding: 150px 15px 50px;
+    background-image: url(../img/icon-padlock-round.svg);
+    -webkit-background-size: 73px auto;
+    background-size: 73px auto;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    text-align: center;
+}
+
+.access-denied.modal-content .btn-style {
+    color: #fff;
+}
+
+.access-denied.modal-content h2{
+    color: #484848;
+}
+
+.access-denied.modal-content hr{
+    border-top: 1px solid #ebebeb;
+}
+
+.access-denied.modal-content .title{
+    margin: 0 0 18px;
+}
+
+.access-denied.modal-content .info{
+    margin: 0 0 35px;
+}
+
+.access-denied.modal-content .middle-title{
+    margin: 0 0 28px;
+}
+
+.access-denied.modal-content .bordered{
+    margin: 32px 0;
+    padding: 35px 0px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.access-denied.modal-content.register{
+    min-width: 450px;
+}
+
+.access-denied.modal-content.register .info{
+    margin: 0 0 35px;
+}
+
+.access-denied.modal-content.register .info2{
+    margin: 0 0 23px;
+}
+
+.access-denied.modal-content.register hr{
+    margin: 30px 0 20px;
+}
+
+
+/*==========================
+Offline Player Modal Styles
+============================*/
+.modal-content .player-offline{
+    overflow: hidden;
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.modal-content .player-offline > *{
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.modal-content .player-offline .info-page{
+    padding: 47px 41px 65px 49px;
+    background-color: #b32062;
+}
+
+.modal-content .player-offline .info-page, 
+.modal-content .player-offline .info-page h1{
+    color: #fff;
+}
+
+.modal-content .player-offline .info-page p{
+    margin: 0 0 55px;
+}
+
+.modal-content .player-offline .info-page > div{
+    min-height: 47px;
+    padding-left: 70px;
+    margin-bottom: 35px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    -webkit-background-size: 47px auto;
+    background-size: 47px auto;
+}
+
+.modal-content .player-offline .info-page .offline{
+    background-image: url('../img/icon-circle-plug.svg');
+}
+
+.modal-content .player-offline .info-page .widgets{
+    background-image: url('../img/icon-circle-list.svg');
+}
+
+.modal-content .player-offline .info-page .notes{
+    background-image: url('../img/icon-circle-note.svg');
+}
+
+.modal-content .player-offline .info-page .comments{
+    background-image: url('../img/icon-circle-comment.svg');
+}
+
+.modal-content .player-offline .info-page .favorites{
+    background-image: url('../img/icon-circle-favorites.svg');
+}
+
+
+.modal-content .player-offline .login .top{
+    padding: 45px 44px 30px 62px;
+    margin-bottom: 94px;
+}
+
+.modal-content .player-offline .login .form{
+    padding-right: 44px;
+}
+
+.modal-content .invalid-email{
+    float: right;
+    font-size: 1.2rem;
+    margin-right: 57px;
+    margin-top: -10px;
+    color: red;
+    display: none;
+}
+
+.modal-content .remember-pass{
+    float: right;
+    font-size: 1.2rem;
+    margin-right: 57px;
+    margin-top: -16px;
+}
+
+.modal-content .player-offline .login .form .submit{
+    margin-top: 10px;
+}
+
+.modal-content .player-offline .login .info{
+    margin: 155px 44px 65px 62px;
+}
+
+@media screen and (max-width: 47.938em){
+    .modal-content .player-offline > *{
+        float: none;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/*===========================
+Register Account Modal Styles
+=============================*/
+#register-modal{    
+}
+
+#register-modal.modal-content{
+    padding-bottom: 20px;
+    border-radius: 5px;
+    max-width: 900px;
+}
+
+#register-modal .pos-center{
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+#register-modal .top{
+    padding-top: 62px;
+    padding-bottom: 37px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+#register-modal .top h1,
+#register-modal .top p{
+    padding: 0 10px;
+}
+
+#register-modal .top h1{
+    margin-bottom: 0;
+}
+
+#register-modal .top p{
+    color: #979797;
+    margin: 0 0 30px;
+}
+
+#register-modal .top .socials{
+    text-align: center;
+    padding: 0;
+}
+
+#register-modal .top .socials .social-btn{
+    display: inline-block;
+    margin: 0 5px;
+    padding-left: 45px;
+    width: 250px;;
+}
+
+#register-modal .content{
+    padding-top: 40px;
+}
+
+#register-modal .content .form .column{
+    float: left;
+    width: 50%;
+}
+
+#register-modal .content .form .bottom{
+    clear: both;
+    margin-top: 24px;
+}
+
+#register-modal .content .form > .submit{
+    margin-top: 36px;
+}
+
+#register-modal .content .form > .submit > *{
+    vertical-align: top;
+}
+
+#register-modal .content .form > .submit button{
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#register-modal .content .form > .submit .error{
+    display: inline-block;
+    max-width: 496px;
+    height: 31px;
+    line-height: 31px;
+    margin: 0;
+    color: #ff1515;
+    font-weight: 600;
+}
+
+#register-modal .content .confirmation h2,
+#register-modal .content .confirmation p{
+    padding:0 10px;
+    text-align: center;
+}
+
+#register-modal .content .confirmation h2{
+    color: #1aa017;
+    margin: 0 0 20px;
+    padding-top: 100px;
+
+    background-image: url('../img/icon-tick.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 64px auto;
+    background-size: 64px auto;
+    background-position: center 0;
+}
+
+#register-modal .content .confirmation p{
+    margin: 0 0 3px;
+    color: #7c7c7c;
+}
+
+@media screen and (max-width: 47.938em){
+    #register-modal .top .socials{
+        display: block;
+        width: 256px;
+        margin: 0 auto;
+    }
+
+    #register-modal .top .socials li{
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    #register-modal .content .form .column{
+        float: none;
+        width: 100%;
+    }
+}
+
+
+/*==========================
+Login Modal Styles
+============================*/
+#login-modal{
+}
+
+#login-modal.modal-content{
+    max-width: 900px;
+    border-radius: 5px;
+    background-color: #20b396;
+}
+
+#login-modal .single-user,
+#login-modal .multi-user{
+    float: left;
+}
+
+#login-modal .single-user{
+    width: 57%;
+    background: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+#login-modal .single-user .top,
+#login-modal .multi-user .top{
+    border-radius: 5px 0 0;
+    padding-top: 40px;
+    padding-left: 100px;
+    height: 95px;
+}
+
+#login-modal .single-user .social-networks {
+    max-width: 490px;
+    margin: 25px auto 15px;
+    text-align: center;
+    font-size: 0px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+#login-modal .single-user .social-networks > * {
+    display: inline-block;
+    width: 185px;
+    padding-left: 45px;
+    margin: 0 5px 10px;
+    font-size: 1.5rem;
+}
+
+#login-modal .single-user .login-error{
+    text-align: center;
+    font-weight: 600;
+    color: #de4c3d;
+    margin: 0px 0 5px;
+}
+
+#login-modal .single-user .form{
+    padding: 0px 67px 25px 100px;
+}
+
+#login-modal .single-user .form .input-row{
+    padding-left: 55px;
+}
+
+#login-modal .single-user .form .input-row label{
+    width: 37px;
+}
+
+#login-modal .single-user .form .input-row input{
+    left: 52px;
+}
+
+#passwd {
+	font:small-caption;font-size:16px
+}
+
+#login-modal .single-user .form .checkbox-row{
+    margin-top: 21px;
+    white-space: nowrap;
+}
+
+#login-modal .single-user .form .checkbox-row,
+#login-modal .single-user .form button.submit{
+    margin-left: 52px;
+}
+
+#login-modal .single-user .form.remember-passwd {
+    border-top: 1px solid #dbdbdb;
+    padding-top: 25px;
+    display: none;
+}
+
+#login-modal .single-user .form.remember-passwd.toggle-on{
+    display: block;
+}
+
+#login-modal .single-user .form.remember-passwd h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#login-modal .single-user .form.remember-passwd .input-row {
+    margin-bottom: 10px;
+}
+
+#login-modal .single-user .form.remember-passwd .submit {
+    float: right;
+    margin-right: 55px;
+}
+
+#login-modal .multi-user{
+    width: 43%;
+    min-height: 430px;    
+}
+
+#login-modal .multi-user,
+#login-modal .multi-user h1,
+#login-modal .multi-user label,
+#login-modal .multi-user a{
+    color: #fff;
+}
+
+#login-modal .multi-user .top{
+    border-bottom: 1px solid #30b89d;
+    padding-left: 35px;
+}
+
+#login-modal .multi-user .form{
+    padding-top: 48px;
+    padding-left: 35px;
+}
+
+#login-modal .multi-user .form .input-row {
+    padding-left: 70px;
+}
+
+#login-modal .multi-user .form label{
+    width: 60px;
+}
+
+#login-modal .multi-user .form input{
+    background-color: #20b396;
+    border: 1px solid #fff;
+    left: 72px;
+    color: #fff;
+}
+
+#login-modal .multi-user .form .submit{
+    background-color: #20ab8f;
+    margin-left: 72px;
+}
+
+#login-modal .multi-user .info{
+    margin: 46px auto 0;
+    max-width: 230px;
+    text-align: center;
+}
+
+@media screen and (max-width: 47.938em){
+    #login-modal .single-user,
+    #login-modal .multi-user{
+        float: none;
+        width: 100%;
+    }
+
+    #login-modal .multi-user{
+        min-height: 0;
+        padding-bottom: 50px;
+    }
+}
+
+/**
+ * Newsletter
+ */
+
+#newsletter-modal .modal-content{
+    max-width: 570px;
+    margin: 0 auto;
+    background-color: #982050;
+    color: #fff;
+}
+
+#newsletter-modal .top,
+#newsletter-modal .content{
+    padding-left: 115px;
+    padding-right: 100px;
+}
+
+#newsletter-modal .top {
+    padding-top: 45px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #9f305c;
+    background-image: url('../../Modern_13/img/icon-newspaper.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#newsletter-modal .top h1{
+    margin-bottom: 0;
+    line-height: 3rem;
+    color: #fff;
+}
+
+#newsletter-modal .content{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+#newsletter-modal .content p {
+    margin-bottom: 40px;
+}
+
+#newsletter-modal .content p a{
+    color: #f4468c;
+}
+
+#newsletter-modal .content .input-style{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#newsletter-modal .content .info{
+    margin-top: 3px;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+#newsletter-modal .content ::-webkit-input-placeholder { /* WebKit browsers */
+    color:#fff;
+}
+
+#newsletter-modal .content :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+}
+
+#newsletter-modal .content ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#fff;
+}
+
+#newsletter-modal .content :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#fff;
+}
+
+#newsletter-modal .content .sign-up{
+    float: right;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #f4468c;
+}
+
+/**
+ * Awards Modal
+ */
+#awards-modal{
+    max-width: 1045px;
+    font-size: 2rem;
+}
+
+#awards-modal .top,
+#awards-modal .bottom{
+    padding: 25px 45px 0px;
+}
+
+#awards-modal .top{
+    height: 170px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+}
+
+#awards-modal section header{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#awards-modal section header h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#awards-modal section header h3{
+    font-size: 1.7rem;
+}
+
+#awards-modal .award-image,
+#awards-modal .current-awards,
+#awards-modal .recent-winners{
+    float: left;
+    min-height: 440px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#awards-modal .award-image{
+    width: 29%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#awards-modal .current-awards{
+    width: 37%;
+    background-color: #000;
+    color: #fff;
+}
+
+#awards-modal .current-awards .top{
+    border-bottom-color: #333;
+}
+
+#awards-modal .current-awards .top .btn-style{
+    line-height: 45px;
+    height: 45px;
+    padding: 0 22px;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: #a30606;
+}
+
+#awards-modal .current-awards .awards-list li{
+    position: relative;
+    padding-left: 50px;
+    margin: 6px 0;
+    font-size: 1.6rem;
+    line-height: 30px;
+}
+
+#awards-modal .current-awards .awards-list li:before{
+    content: attr(data-id);
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #49acd0;
+    border-radius: 50%;
+}
+
+#awards-modal .recent-winners{
+    width: 34%;
+    color: #000;
+}
+
+#awards-modal .recent-winners .winners-list li{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    margin: 8px 0;
+    padding-left: 60px;
+    font-size: 1.6rem;
+}
+
+#awards-modal .recent-winners .winners-list .avatar-round{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+@media screen and (max-width: 63.938em){
+    #awards-modal .award-image{
+        display: none;
+    }
+
+    #awards-modal .current-awards{
+        width: 55%;
+    }
+
+    #awards-modal .recent-winners{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 47.938em){
+    #awards-modal{
+        max-width: 500px;
+    }
+
+    #awards-modal .current-awards,
+    #awards-modal .recent-winners{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/**
+ * Earn Points Modal
+ */
+#earn-points-modal{
+    max-width: 685px;
+}
+
+#earn-points-modal .section{
+    padding: 50px 11%;
+    background-position: 11% center;
+    background-repeat: no-repeat;
+}
+
+#earn-points-modal .section h2,
+#earn-points-modal .section p{
+    margin: 0;
+    margin-left: 25%;
+}
+
+#earn-points-modal .section h2{
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+#earn-points-modal .header{
+    color: #fff;
+    background-image: url('../../Modern_13/img/icon-trophy.png');
+    background-color: #000;
+}
+
+#earn-points-modal .content{
+    max-width: 480px;
+    margin: 0 auto;
+    color: #000;
+}
+
+#earn-points-modal .content ul li{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 27px;
+    line-height: 27px;
+    margin: 8px 0;
+
+    font-weight: 700;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#earn-points-modal .content ul li span{
+    display: inline-block;
+    padding: 0 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #49acd0;
+}
+
+#earn-points-modal .footer{
+    color: #000;
+    background-image: url('../../Modern_13/img/icon-flag.png');
+    background-color: #f1c40f;
+}
+
+@media screen and (max-width: 34.375em){
+    #earn-points-modal .section{
+        background-image: none;
+    }
+
+    #earn-points-modal .section h2,
+    #earn-points-modal .section p{
+        margin: 0;
+    }
+
+    #earn-points-modal .content ul li{
+        width: 100%;
+    }
+}
+
+
+/**
+ * Support - Buy tickets modal
+ */
+#buy-support-tickets-modal{
+    max-width: 600px;
+    background-color: #f9e804;
+    color: #000;
+}
+
+#buy-support-tickets-modal p{
+    color: #3c484e;
+    margin: 0;
+}
+
+#buy-support-tickets-modal .section{
+    border-bottom: 1px solid #e5d604;
+    padding: 30px 7.5%;
+}
+
+#buy-support-tickets-modal .header{
+    padding-top: 50px;
+    padding-bottom: 35px;
+    padding-left: 25%;
+    background: url('../../Modern_13/img/icon-e.png') 7.5% center no-repeat;
+}
+
+#buy-support-tickets-modal .header h2{
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#buy-support-tickets-modal .header p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+#buy-support-tickets-modal .option{
+    line-height: 34px;
+    font-weight: 700;
+}
+
+#buy-support-tickets-modal .option .btn-style{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#buy-support-tickets-modal .option .btn-style.black{
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#buy-support-tickets-modal .option .btn-style.black span{
+    font-size: 2rem;
+}
+
+#buy-support-tickets-modal .footer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/**
+ * #certificates-companies-modal
+ */
+#certificates-companies-modal{
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+#certificates-companies-modal .companies-list{
+    border-left: 1px #ccc dotted;
+    border-top: 1px #ccc dotted;
+}
+
+#certificates-companies-modal .companies-list .minitext{
+    background-image: url('../../_img/firma.jpg');
+    min-height: 65px;
+}
+
+#certificates-companies-modal .companies-list .grid-items-wrapper{
+    margin-top: 30px;
+    border: 1px #ccc dotted;
+    border-bottom: none;
+    border-right: none;
+}
+
+#certificates-companies-modal .companies-list .grid-item{
+    width: 25%;
+    min-height: 80px;
+    padding: 1%;
+    border-right: 1px #ccc dotted;
+    border-bottom: 1px #ccc dotted;
+    text-align: center;
+}
+
+#certificates-companies-modal .companies-list .dodajfirme{
+    text-align: right;
+}
+
+@media screen and (max-width: 56.250em){
+    #certificates-companies-modal .companies-list .grid-item{
+        width: 33.333%;
+    }
+}
+
+@media screen and (max-width: 40.625em){
+    #certificates-companies-modal .companies-list .grid-item{
+        width: 50%;
+    }
+}
+
+
+/*********************
+ * confirmExamDialog *
+ *********************/
+.confirm-exam-dialog{
+    max-width: 800px;
+    padding: 20px;
+}
+
+.confirm-exam-dialog .top{
+    margin-bottom: 20px;
+    line-height: 26px;
+    color: #202020;
+}
+
+.confirm-exam-dialog .buttons{
+    text-align: center;
+}
+
+
+
+/**
+ * stationary-training-survey
+ */
+#stationary-training-survey{
+    max-width: 640px;
+    padding: 20px 30px;
+    color: #202020;
+}
+
+#stationary-training-survey .header{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #858585;
+    font-size: 2.8rem;
+}
+
+#stationary-training-survey .form .title{
+    display: block;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+#stationary-training-survey .form .control-row{
+    padding-left: 135px;
+}
+
+#stationary-training-survey .form .control-row label{
+    width: 125px;
+}
+
+#stationary-training-survey .form .control-row textarea{
+    min-height: 120px;
+}
+
+#stationary-training-survey .form .stylish-checkbox{
+    margin-bottom: 10px;
+}
+
+#stationary-training-survey .form .btn-submit{
+    float: right;
+}
+
+
+/**
+ * Workshop alert
+ */
+#workshop-alert-modal{
+    max-width: 680px;
+}
+
+#workshop-alert-modal .content{
+    margin: 0 10%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#workshop-alert-modal h3{
+    padding-top: 100px;
+    font-size: 2rem;
+    color: #222;
+    background-image: url('../../Modern_13/img/mic.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#workshop-alert-modal p{
+    margin: 10px 0px 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+#workshop-alert-modal .btn-activate{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+
+
+.unsupported-player-browser{
+    max-width: 500px;
+    padding: 50px 60px;
+    text-align: center;
+}
+
+.unsupported-player-browser .title{
+    background-image: url('../../Modern_13/img/player-supported-browsers.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    padding-top: 120px;
+    margin-bottom: 35px;
+}
+
+.unsupported-player-browser hr{
+    margin: 30px 0;
+}
+
+
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+
+
+
