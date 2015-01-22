@@ -1,5 +1,5 @@
 #Preloader
-Modular, easy to upgrade preloader framework witch let you preload diffrent types of files.
+Modular, easy to upgrade preloader framework with let you preload diffrent types of files.
 
 To init add combined file
 ```html
