@@ -313,7 +313,7 @@ describe("Module", function() {
 			var utils = this;
 			var countFiles = function(){ 
 
-				screenWidth = utils.getScreenWidth();
+				screenWidth = utils.getWindowWidth();
 				return 4;
 
 			};
@@ -343,7 +343,7 @@ describe("Module", function() {
 			var utils = this;
 			var countFiles = function(){ 
 
-				screenWidth = utils.getScreenWidth();
+				screenWidth = utils.getWindowWidth();
 				return 4;
 
 			};
