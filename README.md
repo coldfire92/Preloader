@@ -8,10 +8,18 @@ To init add combined file
 and create new preloader.
 ```js
 new PRELOADER({
-    MODULE_01: {},
-    MODULE_02: {},
-    MAIN {},
-    UI {}
+    MODULE_01: {
+    	...
+    },
+    MODULE_02: {
+    	...
+    },
+    MAIN {
+    	...
+    },
+    UI {
+    	...
+	}
 });
 ```
 ## 'MAIN' Config file
