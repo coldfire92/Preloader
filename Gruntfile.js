@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig((function(){
 
 
-    var DEBUG = true; // combine debugger files
+    var DEBUG = false; // combine debugger files
 
     var modulesToLoad = ['CSS', 'JS', 'IMG'];
 
@@ -86,6 +86,14 @@ module.exports = function(grunt) {
     
 
     return {
+        watch: {
+          scripts:{
+            files: ['index.html','specs/**/*.js', 'main/*.js', 'modules/**/*.js'],
+            options: {
+                livereload: true
+            }
+          }  
+       }, 
        concat: {
           options: {
             separator: '',
@@ -111,6 +119,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['concat']);
 
 

@@ -6,142 +6,103 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-       <style>
-
-            body{
-                margin: 0px;
-            }
-             ul#debbuger {
-                padding: 0;
-             }
-
-            ul#debbuger li{
-                list-style-type: none;
-                width: 100%;
-                padding: 5px;
-            }
-
-            ul#debbuger li.error {
-                background: red;
-                color: #fff;
-            }
-
-            ul#debbuger li.warn {
-                background: orange;
-                color: #fff;
-            }
-
-             ul#debbuger li.log {
-                background: #3399FF;
-                color: #fff;
-            }
-
-
-       </style>
-
+        <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.1.3/jasmine.css">
     </head>
+
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+     
+    <!-- jasmine -->
+    <script src="jasmine/lib/jasmine-2.1.3/jasmine.js"></script>
+    <script src="jasmine/lib/jasmine-2.1.3/jasmine-html.js"></script>
+    <script src="jasmine/lib/jasmine-2.1.3/boot.js"></script>
+    <script src="jasmine/matchers.js"></script>    
 
-        <!-- Add your site or application content here -->
+    <!-- debugger -->
+    <script src="bower_components/mp-debugger/dist/debugger.js"></script>    
 
+    <!-- main files -->
+    <script src="main/preloader.js"></script>     
+    <script src="main/deb.Preloader.js"></script>   
 
-     <ul id="debbuger">
+    <!-- module mockup -->
+    <script src="modules/mockup/preloader.Module.js"></script> 
 
-     </ul>   
-        
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
-   
-
-    <!-- 
-    <script src="modules/css/lib/basketJS.js"></script>
-    <script src="modules/css/preloaderMP_CSS.js"></script>
-    <script src="modules/css/preloaderMP_CSS_DEB.js"></script>
-    
-    <script src="modules/js/preloaderMP_JS.js"></script>
-    <script src="modules/js/preloaderMP_JS_DEB.js"></script>
-
-    <script src="modules/img/preloaderMP_IMG.js"></script>
-    <script src="modules/img/preloaderMP_IMG_DEB.js"></script>
-
-    <script src="main/preloaderMP_DEB.js"></script> 
-    <script src="main/preloaderMP.js"></script>
-    
-    -->
-
-    <script src="output/preloaderMP.min.js"></script>
-
-    <script>
+    <!-- spec test -->
+    <script src="specs/main.js"></script>    
+    <script src="specs/module.js"></script>    
 
 
-    window.onload = function(){
+   <script>
 
+    if(typeof DEBUGGER == "undefined") DEBUGGER = {run: function(){},addMethod: function(){}};
 
-        var preloader = new preloaderMP({
-            CSS: {
-                mobile: ["files/css/mobile/file1.css", "files/css/mobile/file2.css", "files/css/mobile/file3.css"],
-                screen: ["files/css/screen/file1.css", "files/css/screen/file2.css", "files/css/screen/file3.css"]
-            },
-            JS: {
-                screen: {
-                    'files/js/screen/jquery.js' : ['files/js/screen/jqueryUI.js']
-                    },
-                mobile: {
-                    'files/js/screen/jquery.js' : ['files/js/screen/jqueryUI.js']
-                }    
-            },
-            IMG: [
-                {
-                  min: 1000, // load when width (1000, 1200)
-                  max: 1200,
-                  images: ['files/img/1000_1200.jpg']
-                },
-
-                {
-                  min: 800, // load when min 800
-                  images: ['files/img/min_800.jpg']
-                },
-
-                {
-                  max: 900,
-                  images: ['files/img/max_900.jpg']
-                },
-                {
-                  type: 'screen', // screen|mobile
-                  images: ['files/img/screen.jpg']
-                },
-                {
-                  type: 'mobile', // screen|mobile
-                  images: ['files/img/mobile.jpg']
-                },
-                {
-                  images: ['files/img/always.jpg']
-                }
-
-            ],
-            MAIN: {
-                 // isMobile: false,
-                 // screenWidth: '1344', // bez px
-             },
-            UI: {
-                onLoadFile: function(loaded, all, percange) {
-
-                    // console.log(loaded + '/' + all + ' | ' + percange);
+        // var preloader = new PRELOADER({
+        //     // CSS: {
+        //     //     mobile: ["files/css/mobile/file1.css", "files/css/mobile/file2.css", "files/css/mobile/file3.css"],
+        //     //     screen: ["files/css/screen/file1.css", "files/css/screen/file2.css", "files/css/screen/file3.css"]
+        //     // },
+        //     // JS: {
+        //     //     screen: {
+        //     //         'files/js/screen/jquery.js' : [
                     
-                },
-                init: function() {},
-                complete: function(){}
-            }
-        });
+        //     //           {url:  'files/js/screen/snapSVG.js', test: true }
 
 
-    };
+        //     //         ,'files/js/screen/jqueryUI.js'],
+
+        //     //         },
+
+        //     //     mobile: {
+        //     //         'files/js/screen/jquery.js' : ['files/js/screen/jqueryUI.js']
+        //     //     }    
+        //     // },
+        //     // IMG: [
+        //     //     {
+        //     //       min: 1000, // load when width (1000, 1200)
+        //     //       max: 1200,
+        //     //       images: ['files/img/1000_1200.jpg']
+        //     //     },
+
+        //     //     {
+        //     //       min: 800, // load when min 800
+        //     //       images: ['files/img/min_800.jpg']
+        //     //     },
+
+        //     //     {
+        //     //       max: 900,
+        //     //       images: ['files/img/max_900.jpg']
+        //     //     },
+        //     //     {
+        //     //       type: 'screen', // screen|mobile
+        //     //       images: ['files/img/screen.jpg']
+        //     //     },
+        //     //     {
+        //     //       type: 'mobile', // screen|mobile
+        //     //       images: ['files/img/mobile.jpg']
+        //     //     },
+        //     //     {
+        //     //       images: ['files/img/always.jpg']
+        //     //     }
+
+        //     // ],
+        //     // MAIN: {
+        //     //      // isMobile: false,
+        //     //      absolutePath: "",
+        //     //      cache: true,
+        //     //      debug: true,
+        //     //      // screenWidth: '1344', // bez px
+        //     //  },
+        //     UI: {
+        //         onLoadFile: function(loaded, all, percange) {
+
+        //             console.log(loaded + '/' + all + ' | ' + percange);
+                    
+        //         },
+        //         init: function() {},
+        //         complete: function(){}
+        //     }
+
+        // });
 
     </script>
 </body>

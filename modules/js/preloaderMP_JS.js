@@ -9,7 +9,6 @@ if(typeof window.preloaderMP_MODULE == 'undefined') window.preloaderMP_MODULE = 
  */
 window.preloaderMP_MODULE.prototype.JS = function(conf){
 	
-	
 	/*-----  Private ------*/
 
 	var version = '1.0';
@@ -36,6 +35,29 @@ window.preloaderMP_MODULE.prototype.JS = function(conf){
 	};
 
 	/**
+	 * Parse if is object with test or only url(string)
+	 * @param  {[type]} file [description]
+	 * @return {[type]}      [description]
+	 */
+	var parseFileIsLoad = function(file){
+
+		if (typeof file == "string") return true;
+
+		if (typeof file == "object" && file.test) return true;
+
+		return false; 
+			
+	};
+
+	var getFileUrl = function(file){
+
+		if (typeof file == "string") return utils.getAbsoluteFilePath(file);
+
+		if (typeof file == "object" && file.test) return utils.getAbsoluteFilePath(file.url);
+
+	};
+
+	/**
 	 * Call by plugin to count files to load
 	 * @return {int} file to load
 	 */
@@ -50,38 +72,27 @@ window.preloaderMP_MODULE.prototype.JS = function(conf){
 					 var JsFiles = filesToLoad[library]; // plugins to jQuery (array)
 					 var jsFilesObjects = []; // array for objects to basketJs plugin
 
-				
-					 if(JsFiles.length <= 0 && !(JsFiles instanceof Array)){
-
-					 	// only one file to load
-					 
-					 	howMany++; // add one file to load (library)
-					 	continue;	
-
-					 }
 					   
 					 // we have plugins
 					 
 					 (function(prelObj, lib, plug) {
 
 
-					 		
-					 		howMany++; // library
+					 		if(parseFileIsLoad(lib)) howMany++; // library
 
 
 					 		plug.forEach(function(script, index){
 
 
-								 	howMany++; // plugins
+								 	if(parseFileIsLoad(script)) howMany++; // plugins
 					 				
 
 					 		});
-					 			 
+
 	    
 	   				 })(self, library, JsFiles);
 
 		}
-
 
 		return howMany;		
 
@@ -115,7 +126,13 @@ window.preloaderMP_MODULE.prototype.JS = function(conf){
 
 					 	// only one file to load
 					 	utils.testDebug('MAIN', 'startLoadFile', library);
-					 	basket.require({url: library, skipCache: !utils.cache}).then(function(){ fileLoaded(library)},function(){utils.testDebug('MAIN', 'onFileError', library);});
+
+					 	if(parseFileIsLoad(library)){
+
+					 		basket.require({url: getFileUrl(library), skipCache: !utils.cache}).then(function(){ fileLoaded(library)},function(){utils.testDebug('MAIN', 'onFileError', library);});
+
+					 	}
+					 	
 					 	continue;	
 
 					 }
@@ -126,21 +143,27 @@ window.preloaderMP_MODULE.prototype.JS = function(conf){
 
 					 	utils.testDebug('MAIN', 'startLoadFile', library);
 
-					 	basket.require({url: lib, skipCache: !utils.cache}).then(function(){
+					 	basket.require({url: getFileUrl(lib), skipCache: !utils.cache}).then(function(){
 
-	
-					 			fileLoaded(library);
+					 			fileLoaded(getFileUrl(library));
 
 					 			plug.forEach(function(script, index){
 
-					 				utils.testDebug('MAIN', 'startLoadFile', script);
-					 				basket.require({url: script, skipCache: !utils.cache}).then(function(){
-					 					fileLoaded(script);	
 
-					 				}, function(){utils.testDebug('MAIN', 'onFileError', script);});
+					 				utils.testDebug('MAIN', 'startLoadFile', getFileUrl(script));
+
+					 				if(parseFileIsLoad(script)){
+
+						 				basket.require({url: getFileUrl(script), skipCache: !utils.cache}).then(function(){
+						 					
+						 					fileLoaded(getFileUrl(script));	
+
+						 				}, function(){utils.testDebug('MAIN', 'onFileError', getFileUrl(script) )});
+
+					 				}
 
 
-					 			});
+					 	});
 					 			 
 
 

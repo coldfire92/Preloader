@@ -4,7 +4,7 @@ if(typeof window.preloaderMP_MODULE == 'undefined') window.preloaderMP_MODULE = 
 
 /**
  * Mockup for module
- * @param {objects} conf object with settings (files) for plugin
+ * @param {object} conf object with settings (files) for plugin
  */
 window.preloaderMP_MODULE.prototype.IMG = function(conf){
 	
@@ -108,18 +108,18 @@ window.preloaderMP_MODULE.prototype.IMG = function(conf){
 
 			try{
 			
-				utils.testDebug('MAIN', 'startLoadFile', file);
+				utils.testDebug('MAIN', 'startLoadFile', utils.getAbsoluteFilePath(file));
 
 				var obj = new Image();
-				obj.src = file;
+				obj.src = utils.getAbsoluteFilePath(file);
 				obj.onload = function(){
-					fileLoaded(file);
+					fileLoaded(utils.getAbsoluteFilePath(file));
 				};
 				obj.onerror = function(){
 
 					// image isnt much important, so if cant get image, go next
 					fileLoaded(file);
-					utils.testDebug('MAIN', 'onFileError', file);
+					utils.testDebug('MAIN', 'onFileError', utils.getAbsoluteFilePath(file));
 
 				};
 
