@@ -1,11 +1,11 @@
 #Preloader
-Modular, easy to upgrade preloader framework with let you preload diffrent types of files.
+Modular, easy to upgrade preloader framework witch let you preload diffrent types of files.
 
 To init add combined file
 ```html
 <script src="dist/debugger.js"></script>
 ```
-and init preloader
+and create new preloader.
 ```js
 new PRELOADER({
     MODULE_01: {},
@@ -66,7 +66,7 @@ List of methods in 'this' object with plugin can "sometimes must" use.
 | `getWindowWidth` | - | int | Get window width
 | `getAbsoluteFilePath` | url(string) | absoluteUrl(string) | Get absolute file url
 
-Here`s some mockup for modules
+Here`s some mockup for modules.
 
 ```js
 
